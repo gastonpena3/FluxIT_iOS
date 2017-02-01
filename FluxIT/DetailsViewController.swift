@@ -17,7 +17,7 @@ class DetailsViewController:UIViewController {
     var getDetailToFavorite:String!
     var imageSeason:UIImage!
     var isKindOfMovie:Bool!
-    var favoriteResponseDict:[String:String]!
+    var favoriteResponseDict:[String:String]?
     var popUpMessage:String!
     
     override func viewDidLoad() {
@@ -53,12 +53,15 @@ class DetailsViewController:UIViewController {
             
             if let data = data, error == nil {
                 DispatchQueue.main.sync {
-                    let jsonData = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: String
+                    let jsonData = try! JSONSerialization.jsonObject(with: data, options: []) as? [String: String
                     ]
                     self.favoriteResponseDict = jsonData
                     
-                    if self.favoriteResponseDict["message"] != "" {
-                        self.popUpMessage = self.favoriteResponseDict["message"]
+                    if self.favoriteResponseDict?["message"] != nil {
+                        self.popUpMessage = self.favoriteResponseDict?["message"]
+                        if self.popUpMessage == "" {
+                            self.popUpMessage = "Mensaje Vacío"
+                        }
                     } else {
                         self.popUpMessage = "Mensaje a definir"
                     }
@@ -95,7 +98,6 @@ class DetailsViewController:UIViewController {
                                 
                                 DispatchQueue.main.async {
                                     self.imageSeason = UIImage(data: imageData)
-                                    
                                     self.headerCollellectionView.reloadData()
                                     self.detailTableView.reloadData()
                                 }
@@ -161,8 +163,6 @@ extension DetailsViewController: UITableViewDataSource {
                 cell = cellTwo
             }
         }
-        
-        
         return cell
     }
     
