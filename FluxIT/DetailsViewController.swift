@@ -19,6 +19,9 @@ class DetailsViewController:UIViewController {
     var isKindOfMovie:Bool!
     var favoriteResponseDict:[String:String]?
     var popUpMessage:String!
+    var type:String!
+    var getDetailCall:String!
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         
@@ -29,6 +32,11 @@ class DetailsViewController:UIViewController {
         //SET TABLEVIEW DELEGATE &DATASOURCE
         detailTableView.dataSource = self
         detailTableView.delegate = self
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(DetailsViewController.getJsonDataDetails), for: UIControlEvents.valueChanged)
+        detailTableView.addSubview(refreshControl)
         
         //SET COLLECTIONVIEW DATASOURCE
         headerCollellectionView.dataSource = self
@@ -110,6 +118,31 @@ class DetailsViewController:UIViewController {
                     }
                 }.resume()
         }
+    }
+    
+    //CALL SERVICE DETAILS
+    func getJsonDataDetails() {
+        //URL DETAILS
+        let url = URL(string: BASE_URL + type + getDetailCall)!
+        
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let data = data, error == nil {
+                DispatchQueue.main.sync {
+                    let jsonData = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
+                    
+                    self.details = Details(dictionary:jsonData)
+                    self.detailTableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                }
+                
+            } else {
+                print(error ?? "error")
+            }
+            
+            }.resume()
     }
 }
 

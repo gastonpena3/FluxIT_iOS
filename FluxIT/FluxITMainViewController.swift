@@ -121,6 +121,8 @@ class FluxITMainViewController: UIViewController {
                 vc.details = details
                 vc.getDetailToFavorite = getDetailCall
                 vc.isKindOfMovie = isKindOfMovie
+                vc.type = type
+                vc.getDetailCall = getDetailCall
             }
         }
     }
