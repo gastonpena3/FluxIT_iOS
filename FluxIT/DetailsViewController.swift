@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DetailsViewController:UIViewController, UITabBarDelegate, UICollectionViewDataSource {
+class DetailsViewController:UIViewController {
     
     @IBOutlet weak var detailTableView: UITableView!
     @IBOutlet weak var headerCollellectionView: UICollectionView!
@@ -17,6 +17,9 @@ class DetailsViewController:UIViewController, UITabBarDelegate, UICollectionView
     var getDetailToFavorite:String!
     var imageSeason:UIImage!
     var isKindOfMovie:Bool!
+    var favoriteResponseDict:[String:String]!
+    var popUpMessage:String!
+    
     
     
     override func viewDidLoad() {
@@ -25,17 +28,20 @@ class DetailsViewController:UIViewController, UITabBarDelegate, UICollectionView
         bringImageFromURL()
         view.backgroundColor = UIColor.black
         
+        //SET TABLEVIEW DELEGATE &DATASOURCE
         detailTableView.dataSource = self
         detailTableView.delegate = self
         
+        //SET COLLECTIONVIEW DATASOURCE
         headerCollellectionView.dataSource = self
-        headerCollellectionView.delegate = self
     }
     
+    //ADD TO FAVORITE BUTTON ACTION
     @IBAction func addFavorite(_ sender: UIButton) {
         print("ADD TO FAVORITE")
-        //getJsonfavorite()
-        showPopUpAddToFavorite()
+        
+        getJsonfavorite()
+        //showPopUpAddToFavorite()
     }
     
     //CALL SERVICE
@@ -49,13 +55,17 @@ class DetailsViewController:UIViewController, UITabBarDelegate, UICollectionView
             
             if let data = data, error == nil {
                 DispatchQueue.main.sync {
-                    let jsonData = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
+                    let jsonData = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: String
+                    ]
+                    self.favoriteResponseDict = jsonData
                     
-                    
-                    
-                    self.showPopUpAddToFavorite()
+                    if self.favoriteResponseDict["message"] != "" {
+                        self.popUpMessage = self.favoriteResponseDict["message"]
+                    } else {
+                        self.popUpMessage = "Mensaje a definir"
+                    }
+                    self.showPopUpAddToFavorite(message: self.popUpMessage)
                 }
-                
             } else {
                 print(error ?? "error")
             }
@@ -63,14 +73,14 @@ class DetailsViewController:UIViewController, UITabBarDelegate, UICollectionView
             }.resume()
     }
     
-    func showPopUpAddToFavorite(){
-        
+    //SHOW POP UP
+    func showPopUpAddToFavorite(message:String){
         let popOverVC = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "PopUpVC") as! PopUpViewController
         self.addChildViewController(popOverVC)
         popOverVC.view.frame = self.view.frame
+        popOverVC.messagePopUp.text = message
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParentViewController: self)
-        
     }
     
     func bringImageFromURL() {
@@ -104,7 +114,7 @@ class DetailsViewController:UIViewController, UITabBarDelegate, UICollectionView
 }
 
 //IMPLEMENT UITABLEVIEW DATASOURCE METHODS
-extension DetailsViewController:UITableViewDataSource, UITableViewDelegate {
+extension DetailsViewController: UITableViewDataSource {
     
     //SET NUMBER OF SECTION
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -127,6 +137,7 @@ extension DetailsViewController:UITableViewDataSource, UITableViewDelegate {
         
         if indexPath.section == 0 {
             let cellOne:DetailsFirstSectionCell = tableView.dequeueReusableCell(withIdentifier: "DetailCellOne", for:indexPath) as! DetailsFirstSectionCell
+            
             if indexPath.row != 0 {
                 if cellOne.addButton != nil {
                     cellOne.addButton .removeFromSuperview()
@@ -140,7 +151,7 @@ extension DetailsViewController:UITableViewDataSource, UITableViewDelegate {
         } else {
             if isKindOfMovie == true {
                 let cellTwo:DetailsSecondSectionCellMovies = tableView.dequeueReusableCell(withIdentifier: "DetailCellThree", for:indexPath) as! DetailsSecondSectionCellMovies
-            
+                
                 cellTwo.nameLabel.text = self.details.actors[indexPath.row]["name"] as! String?
                 cellTwo.detailsLabel.text = self.details.actors[indexPath.row]["description"] as! String?
                 
@@ -157,6 +168,11 @@ extension DetailsViewController:UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+}
+
+//IMPLEMENT UITABLEVIEW DELEGATE METHODS
+extension DetailsViewController: UITableViewDelegate {
+    
     //SET CUSTOM HEADER
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
     {
@@ -169,7 +185,6 @@ extension DetailsViewController:UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
@@ -188,7 +203,7 @@ extension DetailsViewController:UITableViewDataSource, UITableViewDelegate {
 }
 
 //IMPLEMENT UICOLLECTIONVIEW DATASOURCE METHODS
-extension DetailsViewController:UICollectionViewDelegate {
+extension DetailsViewController:UICollectionViewDataSource {
     
     //SET NUMBER OF ITEMS IN SECTION
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

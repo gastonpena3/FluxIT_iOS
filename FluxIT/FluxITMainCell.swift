@@ -8,10 +8,10 @@
 
 import Foundation
 import UIKit
+
 class FluxITMainCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-
 
 }

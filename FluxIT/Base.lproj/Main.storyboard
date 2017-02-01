@@ -80,8 +80,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSI-ZP-Ely">
                                 <rect key="frame" x="0.0" y="64" width="320" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad de Peliculas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJs-Ej-OU0">
-                                        <rect key="frame" x="16" y="8" width="143" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad de Peliculas Encontradas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJs-Ej-OU0">
+                                        <rect key="frame" x="16" y="8" width="228" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="vZm-BX-7aK"/>
                                         </constraints>
@@ -89,8 +89,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cantidad de Series:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ju-61-jes">
-                                        <rect key="frame" x="16" y="31" width="143" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cantidad de Series Encontradas:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ju-61-jes">
+                                        <rect key="frame" x="16" y="31" width="228" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="ZmA-Fb-GtS"/>
                                         </constraints>
@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352" y="138"/>
+            <point key="canvasLocation" x="1351.875" y="137.5"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="QDo-Gs-Mcv">
@@ -510,6 +510,9 @@
                             <constraint firstAttribute="trailing" secondItem="8op-DE-yI9" secondAttribute="trailing" id="eOI-18-rzV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messagePopUp" destination="rT6-S9-K4K" id="iFP-MR-C4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAj-0Y-zsk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

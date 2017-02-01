@@ -117,22 +117,15 @@
 		A7AF830E1E3ABFD300853E6F /* FluxIT */ = {
 			isa = PBXGroup;
 			children = (
-				A7AF830F1E3ABFD300853E6F /* AppDelegate.swift */,
-				A7AF83111E3ABFD300853E6F /* FluxITMainViewController.swift */,
-				A7AF83461E3EC4B000853E6F /* FluxITMainCell.swift */,
-				A7AF83131E3ABFD300853E6F /* Main.storyboard */,
 				A7AF83161E3ABFD300853E6F /* Assets.xcassets */,
-				A7AF83181E3ABFD300853E6F /* LaunchScreen.storyboard */,
-				A7AF831B1E3ABFD300853E6F /* Info.plist */,
-				A7AF833D1E3CE7FB00853E6F /* DetailsViewController.swift */,
-				A7AF83441E3E4EEA00853E6F /* DetailsCollectionViewCell.swift */,
-				A7AF83531E4035DD00853E6F /* DetailCollectionViewCellTwo.swift */,
-				A7AF83491E3ECBB000853E6F /* DetailsFirstSectionCell.swift */,
-				A7AF834B1E3ECBEA00853E6F /* DetailsSecondSectionCell.swift */,
-				A7AF83511E400CB100853E6F /* DetailsSecondSectionMoviesCell.swift */,
-				A7AF834D1E3FCCF400853E6F /* PopUpViewController.swift */,
+				A7EE772C1E417BE500564E22 /* Main View */,
+				A7EE772B1E417BD000564E22 /* Details View */,
+				A7AF83131E3ABFD300853E6F /* Main.storyboard */,
+				A7AF830F1E3ABFD300853E6F /* AppDelegate.swift */,
 				A7AF833F1E3CF7EE00853E6F /* Constants.swift */,
 				A7AF834F1E3FE6D000853E6F /* Model.swift */,
+				A7AF83181E3ABFD300853E6F /* LaunchScreen.storyboard */,
+				A7AF831B1E3ABFD300853E6F /* Info.plist */,
 			);
 			path = FluxIT;
 			sourceTree = "<group>";
@@ -153,6 +146,37 @@
 				A7AF83311E3ABFD300853E6F /* Info.plist */,
 			);
 			path = FluxITUITests;
+			sourceTree = "<group>";
+		};
+		A7EE772B1E417BD000564E22 /* Details View */ = {
+			isa = PBXGroup;
+			children = (
+				A7AF833D1E3CE7FB00853E6F /* DetailsViewController.swift */,
+				A7AF834D1E3FCCF400853E6F /* PopUpViewController.swift */,
+				A7EE772D1E417C1200564E22 /* Details Cells */,
+			);
+			name = "Details View";
+			sourceTree = "<group>";
+		};
+		A7EE772C1E417BE500564E22 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				A7AF83111E3ABFD300853E6F /* FluxITMainViewController.swift */,
+				A7AF83461E3EC4B000853E6F /* FluxITMainCell.swift */,
+			);
+			name = "Main View";
+			sourceTree = "<group>";
+		};
+		A7EE772D1E417C1200564E22 /* Details Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A7AF83441E3E4EEA00853E6F /* DetailsCollectionViewCell.swift */,
+				A7AF83531E4035DD00853E6F /* DetailCollectionViewCellTwo.swift */,
+				A7AF83491E3ECBB000853E6F /* DetailsFirstSectionCell.swift */,
+				A7AF834B1E3ECBEA00853E6F /* DetailsSecondSectionCell.swift */,
+				A7AF83511E400CB100853E6F /* DetailsSecondSectionMoviesCell.swift */,
+			);
+			name = "Details Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,6 +569,7 @@
 				A7AF83361E3ABFD300853E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7AF83371E3ABFD300853E6F /* Build configuration list for PBXNativeTarget "FluxITTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +578,7 @@
 				A7AF83391E3ABFD300853E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7AF833A1E3ABFD300853E6F /* Build configuration list for PBXNativeTarget "FluxITUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +587,7 @@
 				A7AF833C1E3ABFD300853E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,14 +14,12 @@ class FluxITMainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var moviesCountLabel: UILabel!
     @IBOutlet weak var seriesCountLabel: UILabel!
-    
     var series = [Tv]()
     var movies = [Tv]()
     var type:String!
     var getDetailCall:String!
     var details:Details!
     var isKindOfMovie = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,26 +35,26 @@ class FluxITMainViewController: UIViewController {
     
     //CLOSE HEADERVIEW
     @IBAction func closeMainHeaderView(_ sender: UIButton) {
-        print("CLOSE BUTTON")
         headerView.frame = CGRect(x:0, y:0, width:UIScreen.main.bounds.width, height:0)
         
+        //CLOSE ANIMATION
         UIView.animate(withDuration: 0.1,
                        delay: 0.1,
                        options: UIViewAnimationOptions.curveEaseIn,
                        animations: { () -> Void in
-                            self.tableView.frame = CGRect(x:0, y:0, width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height)
+                        self.tableView.frame = CGRect(x:0, y:0, width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height)
         }, completion: { (finished) -> Void in
-        
+            
         })
-        
     }
     
     //CALL SERVICE ALL_CATEGORIES
     func getJsonDataAllCategories() {
+        //URL ALL CATEGORIES
         let url = URL(string: BASE_URL + ALL_CATEGORIES)!
         
         let request = URLRequest(url: url)
-    
+        
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if let data = data, error == nil {
@@ -64,7 +62,7 @@ class FluxITMainViewController: UIViewController {
                     let jsonData = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
                     
                     let seriesArray = jsonData["Tv Series"] as! [[String: AnyObject]]
-                
+                    
                     for serieDictionary in seriesArray {
                         let serie = Tv(dictionary: serieDictionary)
                         self.series.append(serie)
@@ -90,23 +88,22 @@ class FluxITMainViewController: UIViewController {
             }.resume()
     }
     
-    
     //CALL SERVICE DETAILS
     func getJsonDataDetails() {
+        //URL DETAILS
         let url = URL(string: BASE_URL + type + getDetailCall)!
         
         let request = URLRequest(url: url)
-        
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if let data = data, error == nil {
                 DispatchQueue.main.sync {
                     let jsonData = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
-
+                    
                     self.details = Details(dictionary:jsonData)
                     
-                self.performSegue(withIdentifier: "MainIdentifier", sender: nil)
+                    self.performSegue(withIdentifier: "MainIdentifier", sender: nil)
                 }
                 
             } else {
@@ -116,16 +113,15 @@ class FluxITMainViewController: UIViewController {
             }.resume()
     }
     
+    //PREPARE FOR SEGUE - GO TO DETAILS VIEW
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "MainIdentifier") {
             
             if let vc: DetailsViewController = segue.destination as? DetailsViewController {
-                //vc.detailsDict = self.detailsDict
                 vc.details = details
                 vc.getDetailToFavorite = getDetailCall
                 vc.isKindOfMovie = isKindOfMovie
             }
-            
         }
     }
 }
@@ -140,20 +136,18 @@ extension FluxITMainViewController: UITableViewDataSource {
     
     //SET NUMBER OF ROWS IN SECTION
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         var numRows:Int
+        
         if section == 0 {
             numRows = series.count
         } else {
             numRows = movies.count
-            //numRows = 3
         }
         return numRows
     }
     
     //SET VALUES OF EACH ROW
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell:FluxITMainCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for:indexPath) as! FluxITMainCell
         
         if indexPath.section == 0 {
@@ -179,7 +173,6 @@ extension FluxITMainViewController: UITableViewDataSource {
             } else {
                 cell.descriptionLabel.text = "Descripcion a Definir"
             }
-            
         }
         
         return cell
@@ -206,12 +199,11 @@ extension FluxITMainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20
     }
-
 }
 
 //IMPLEMENT UITABLEVIEW DELEGATE METHODS
 extension FluxITMainViewController: UITableViewDelegate {
-
+    
     //SET ACTION TO SELECTABLE CELLS
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -229,6 +221,5 @@ extension FluxITMainViewController: UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
 }
 
