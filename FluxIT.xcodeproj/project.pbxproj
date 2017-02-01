@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7AF83101E3ABFD300853E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF830F1E3ABFD300853E6F /* AppDelegate.swift */; };
+		A7AF83121E3ABFD300853E6F /* FluxITMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF83111E3ABFD300853E6F /* FluxITMainViewController.swift */; };
+		A7AF83151E3ABFD300853E6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AF83131E3ABFD300853E6F /* Main.storyboard */; };
+		A7AF83171E3ABFD300853E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7AF83161E3ABFD300853E6F /* Assets.xcassets */; };
+		A7AF831A1E3ABFD300853E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AF83181E3ABFD300853E6F /* LaunchScreen.storyboard */; };
+		A7AF83251E3ABFD300853E6F /* FluxITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF83241E3ABFD300853E6F /* FluxITTests.swift */; };
+		A7AF83301E3ABFD300853E6F /* FluxITUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF832F1E3ABFD300853E6F /* FluxITUITests.swift */; };
+		A7AF833E1E3CE7FB00853E6F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF833D1E3CE7FB00853E6F /* DetailsViewController.swift */; };
+		A7AF83401E3CF7EE00853E6F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF833F1E3CF7EE00853E6F /* Constants.swift */; };
+		A7AF83451E3E4EEA00853E6F /* DetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF83441E3E4EEA00853E6F /* DetailsCollectionViewCell.swift */; };
+		A7AF83471E3EC4B000853E6F /* FluxITMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF83461E3EC4B000853E6F /* FluxITMainCell.swift */; };
+		A7AF834A1E3ECBB000853E6F /* DetailsFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF83491E3ECBB000853E6F /* DetailsFirstSectionCell.swift */; };
+		A7AF834C1E3ECBEA00853E6F /* DetailsSecondSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF834B1E3ECBEA00853E6F /* DetailsSecondSectionCell.swift */; };
+		A7AF834E1E3FCCF400853E6F /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF834D1E3FCCF400853E6F /* PopUpViewController.swift */; };
+		A7AF83501E3FE6D000853E6F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF834F1E3FE6D000853E6F /* Model.swift */; };
+		A7AF83521E400CB100853E6F /* DetailsSecondSectionMoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF83511E400CB100853E6F /* DetailsSecondSectionMoviesCell.swift */; };
+		A7AF83541E4035DD00853E6F /* DetailCollectionViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AF83531E4035DD00853E6F /* DetailCollectionViewCellTwo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7AF83211E3ABFD300853E6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7AF83041E3ABFD300853E6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7AF830B1E3ABFD300853E6F;
+			remoteInfo = FluxIT;
+		};
+		A7AF832C1E3ABFD300853E6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7AF83041E3ABFD300853E6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7AF830B1E3ABFD300853E6F;
+			remoteInfo = FluxIT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A7AF830C1E3ABFD300853E6F /* FluxIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluxIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AF830F1E3ABFD300853E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7AF83111E3ABFD300853E6F /* FluxITMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxITMainViewController.swift; sourceTree = "<group>"; };
+		A7AF83141E3ABFD300853E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A7AF83161E3ABFD300853E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7AF83191E3ABFD300853E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7AF831B1E3ABFD300853E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7AF83201E3ABFD300853E6F /* FluxITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AF83241E3ABFD300853E6F /* FluxITTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxITTests.swift; sourceTree = "<group>"; };
+		A7AF83261E3ABFD300853E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7AF832B1E3ABFD300853E6F /* FluxITUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxITUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AF832F1E3ABFD300853E6F /* FluxITUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxITUITests.swift; sourceTree = "<group>"; };
+		A7AF83311E3ABFD300853E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7AF833D1E3CE7FB00853E6F /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A7AF833F1E3CF7EE00853E6F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7AF83441E3E4EEA00853E6F /* DetailsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A7AF83461E3EC4B000853E6F /* FluxITMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FluxITMainCell.swift; sourceTree = "<group>"; };
+		A7AF83491E3ECBB000853E6F /* DetailsFirstSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsFirstSectionCell.swift; sourceTree = "<group>"; };
+		A7AF834B1E3ECBEA00853E6F /* DetailsSecondSectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsSecondSectionCell.swift; sourceTree = "<group>"; };
+		A7AF834D1E3FCCF400853E6F /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		A7AF834F1E3FE6D000853E6F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A7AF83511E400CB100853E6F /* DetailsSecondSectionMoviesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsSecondSectionMoviesCell.swift; sourceTree = "<group>"; };
+		A7AF83531E4035DD00853E6F /* DetailCollectionViewCellTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCellTwo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7AF83091E3ABFD300853E6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AF831D1E3ABFD300853E6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AF83281E3ABFD300853E6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7AF83031E3ABFD300853E6F = {
+			isa = PBXGroup;
+			children = (
+				A7AF830E1E3ABFD300853E6F /* FluxIT */,
+				A7AF83231E3ABFD300853E6F /* FluxITTests */,
+				A7AF832E1E3ABFD300853E6F /* FluxITUITests */,
+				A7AF830D1E3ABFD300853E6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7AF830D1E3ABFD300853E6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7AF830C1E3ABFD300853E6F /* FluxIT.app */,
+				A7AF83201E3ABFD300853E6F /* FluxITTests.xctest */,
+				A7AF832B1E3ABFD300853E6F /* FluxITUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7AF830E1E3ABFD300853E6F /* FluxIT */ = {
+			isa = PBXGroup;
+			children = (
+				A7AF830F1E3ABFD300853E6F /* AppDelegate.swift */,
+				A7AF83111E3ABFD300853E6F /* FluxITMainViewController.swift */,
+				A7AF83461E3EC4B000853E6F /* FluxITMainCell.swift */,
+				A7AF83131E3ABFD300853E6F /* Main.storyboard */,
+				A7AF83161E3ABFD300853E6F /* Assets.xcassets */,
+				A7AF83181E3ABFD300853E6F /* LaunchScreen.storyboard */,
+				A7AF831B1E3ABFD300853E6F /* Info.plist */,
+				A7AF833D1E3CE7FB00853E6F /* DetailsViewController.swift */,
+				A7AF83441E3E4EEA00853E6F /* DetailsCollectionViewCell.swift */,
+				A7AF83531E4035DD00853E6F /* DetailCollectionViewCellTwo.swift */,
+				A7AF83491E3ECBB000853E6F /* DetailsFirstSectionCell.swift */,
+				A7AF834B1E3ECBEA00853E6F /* DetailsSecondSectionCell.swift */,
+				A7AF83511E400CB100853E6F /* DetailsSecondSectionMoviesCell.swift */,
+				A7AF834D1E3FCCF400853E6F /* PopUpViewController.swift */,
+				A7AF833F1E3CF7EE00853E6F /* Constants.swift */,
+				A7AF834F1E3FE6D000853E6F /* Model.swift */,
+			);
+			path = FluxIT;
+			sourceTree = "<group>";
+		};
+		A7AF83231E3ABFD300853E6F /* FluxITTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7AF83241E3ABFD300853E6F /* FluxITTests.swift */,
+				A7AF83261E3ABFD300853E6F /* Info.plist */,
+			);
+			path = FluxITTests;
+			sourceTree = "<group>";
+		};
+		A7AF832E1E3ABFD300853E6F /* FluxITUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A7AF832F1E3ABFD300853E6F /* FluxITUITests.swift */,
+				A7AF83311E3ABFD300853E6F /* Info.plist */,
+			);
+			path = FluxITUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7AF830B1E3ABFD300853E6F /* FluxIT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AF83341E3ABFD300853E6F /* Build configuration list for PBXNativeTarget "FluxIT" */;
+			buildPhases = (
+				A7AF83081E3ABFD300853E6F /* Sources */,
+				A7AF83091E3ABFD300853E6F /* Frameworks */,
+				A7AF830A1E3ABFD300853E6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FluxIT;
+			productName = FluxIT;
+			productReference = A7AF830C1E3ABFD300853E6F /* FluxIT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7AF831F1E3ABFD300853E6F /* FluxITTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AF83371E3ABFD300853E6F /* Build configuration list for PBXNativeTarget "FluxITTests" */;
+			buildPhases = (
+				A7AF831C1E3ABFD300853E6F /* Sources */,
+				A7AF831D1E3ABFD300853E6F /* Frameworks */,
+				A7AF831E1E3ABFD300853E6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7AF83221E3ABFD300853E6F /* PBXTargetDependency */,
+			);
+			name = FluxITTests;
+			productName = FluxITTests;
+			productReference = A7AF83201E3ABFD300853E6F /* FluxITTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7AF832A1E3ABFD300853E6F /* FluxITUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AF833A1E3ABFD300853E6F /* Build configuration list for PBXNativeTarget "FluxITUITests" */;
+			buildPhases = (
+				A7AF83271E3ABFD300853E6F /* Sources */,
+				A7AF83281E3ABFD300853E6F /* Frameworks */,
+				A7AF83291E3ABFD300853E6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7AF832D1E3ABFD300853E6F /* PBXTargetDependency */,
+			);
+			name = FluxITUITests;
+			productName = FluxITUITests;
+			productReference = A7AF832B1E3ABFD300853E6F /* FluxITUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7AF83041E3ABFD300853E6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Gastón Pena";
+				TargetAttributes = {
+					A7AF830B1E3ABFD300853E6F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					A7AF831F1E3ABFD300853E6F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A7AF830B1E3ABFD300853E6F;
+					};
+					A7AF832A1E3ABFD300853E6F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A7AF830B1E3ABFD300853E6F;
+					};
+				};
+			};
+			buildConfigurationList = A7AF83071E3ABFD300853E6F /* Build configuration list for PBXProject "FluxIT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7AF83031E3ABFD300853E6F;
+			productRefGroup = A7AF830D1E3ABFD300853E6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7AF830B1E3ABFD300853E6F /* FluxIT */,
+				A7AF831F1E3ABFD300853E6F /* FluxITTests */,
+				A7AF832A1E3ABFD300853E6F /* FluxITUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7AF830A1E3ABFD300853E6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AF831A1E3ABFD300853E6F /* LaunchScreen.storyboard in Resources */,
+				A7AF83171E3ABFD300853E6F /* Assets.xcassets in Resources */,
+				A7AF83151E3ABFD300853E6F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AF831E1E3ABFD300853E6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AF83291E3ABFD300853E6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7AF83081E3ABFD300853E6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AF83121E3ABFD300853E6F /* FluxITMainViewController.swift in Sources */,
+				A7AF83101E3ABFD300853E6F /* AppDelegate.swift in Sources */,
+				A7AF834C1E3ECBEA00853E6F /* DetailsSecondSectionCell.swift in Sources */,
+				A7AF834A1E3ECBB000853E6F /* DetailsFirstSectionCell.swift in Sources */,
+				A7AF833E1E3CE7FB00853E6F /* DetailsViewController.swift in Sources */,
+				A7AF83501E3FE6D000853E6F /* Model.swift in Sources */,
+				A7AF83401E3CF7EE00853E6F /* Constants.swift in Sources */,
+				A7AF83471E3EC4B000853E6F /* FluxITMainCell.swift in Sources */,
+				A7AF83541E4035DD00853E6F /* DetailCollectionViewCellTwo.swift in Sources */,
+				A7AF834E1E3FCCF400853E6F /* PopUpViewController.swift in Sources */,
+				A7AF83521E400CB100853E6F /* DetailsSecondSectionMoviesCell.swift in Sources */,
+				A7AF83451E3E4EEA00853E6F /* DetailsCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AF831C1E3ABFD300853E6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AF83251E3ABFD300853E6F /* FluxITTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AF83271E3ABFD300853E6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7AF83301E3ABFD300853E6F /* FluxITUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7AF83221E3ABFD300853E6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7AF830B1E3ABFD300853E6F /* FluxIT */;
+			targetProxy = A7AF83211E3ABFD300853E6F /* PBXContainerItemProxy */;
+		};
+		A7AF832D1E3ABFD300853E6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7AF830B1E3ABFD300853E6F /* FluxIT */;
+			targetProxy = A7AF832C1E3ABFD300853E6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A7AF83131E3ABFD300853E6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7AF83141E3ABFD300853E6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A7AF83181E3ABFD300853E6F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7AF83191E3ABFD300853E6F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7AF83321E3ABFD300853E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7AF83331E3ABFD300853E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7AF83351E3ABFD300853E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FluxIT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gastonPena.FluxIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A7AF83361E3ABFD300853E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FluxIT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gastonPena.FluxIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A7AF83381E3ABFD300853E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FluxITTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gastonPena.FluxITTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FluxIT.app/FluxIT";
+			};
+			name = Debug;
+		};
+		A7AF83391E3ABFD300853E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FluxITTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gastonPena.FluxITTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FluxIT.app/FluxIT";
+			};
+			name = Release;
+		};
+		A7AF833B1E3ABFD300853E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = FluxITUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gastonPena.FluxITUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FluxIT;
+			};
+			name = Debug;
+		};
+		A7AF833C1E3ABFD300853E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = FluxITUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gastonPena.FluxITUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FluxIT;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7AF83071E3ABFD300853E6F /* Build configuration list for PBXProject "FluxIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AF83321E3ABFD300853E6F /* Debug */,
+				A7AF83331E3ABFD300853E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7AF83341E3ABFD300853E6F /* Build configuration list for PBXNativeTarget "FluxIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AF83351E3ABFD300853E6F /* Debug */,
+				A7AF83361E3ABFD300853E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7AF83371E3ABFD300853E6F /* Build configuration list for PBXNativeTarget "FluxITTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AF83381E3ABFD300853E6F /* Debug */,
+				A7AF83391E3ABFD300853E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7AF833A1E3ABFD300853E6F /* Build configuration list for PBXNativeTarget "FluxITUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AF833B1E3ABFD300853E6F /* Debug */,
+				A7AF833C1E3ABFD300853E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7AF83041E3ABFD300853E6F /* Project object */;
+}
