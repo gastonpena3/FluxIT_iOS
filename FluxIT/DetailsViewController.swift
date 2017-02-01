@@ -20,8 +20,6 @@ class DetailsViewController:UIViewController {
     var favoriteResponseDict:[String:String]!
     var popUpMessage:String!
     
-    
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
